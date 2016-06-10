@@ -1,0 +1,15 @@
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\bin\Microsoft.PythonTools.WebRole.dll
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\obj\Debug\attach_server.py
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\obj\Debug\visualstudio_py_debugger.py
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\obj\Debug\visualstudio_py_repl.py
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\obj\Debug\visualstudio_py_util.py
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\obj\Debug\__init__.py
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\obj\Debug\__main__.py
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\bin\AzureSetup.cfg
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\bin\Microsoft.PythonTools.AzureSetup.exe
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\bin\Microsoft.PythonTools.AzureSetup.exe.config
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\bin\wfastcgi.py
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\obj\Debug\deployment-updated-orig-prefix.txt
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\ptvs_virtualenv_proxy.py
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\obj\Debug\web.config
+C:\dev\Personal\WebApps\Python\HyperionApp\HyperionApp\obj\Debug\web.debug.config

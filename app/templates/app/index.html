@@ -1,0 +1,389 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<br /><br />
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="../../static/app/images/person.png" alt="My Profile" width="240" height="240">
+                <div class="intro-text">
+                    <span class="name">Junaid Desai</span>
+                    <hr class="star-light">
+                    <span class="skills">Web Developer - Mobile Developer - E-Commerce Developer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Portfolio</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="../../static/app/images/cabin.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="../../static/app/images/cake.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="../../static/app/images/circus.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="../../static/app/images/game.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="../../static/app/images/safe.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="../../static/app/images/submarine.png" class="img-responsive" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="success" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>About</h2>
+                <hr class="star-light">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-2">
+                <p>This site was created by me in order to get the message out about my services on offer. It is intended for people to be able to read about what I do and have done already in order to gauge the possibility of getting in contact with me to develop a relationship in developing custom software.</p>
+            </div>
+            <div class="col-lg-4">
+                <p>I have an extreme passion for Software development. I use the latest Microsoft techonologies to develop software based off client requirements. I always do intensive research and choose the best framework(s) necessary for the task at hand in order to get the best possible result.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Contact Me</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Name</label>
+                            <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Message</label>
+                            <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <button type="submit" class="btn btn-success btn-lg">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Task Master</h2>
+                        <hr class="star-primary">
+                        <img src="../../static/app/images/cabin.png" class="img-responsive img-centered" alt="">
+                        <p>This project was developed for the client in order to keep track of the staff time management. It is basically a task driven application that allows upper management to dictate tasks to staff whereby the staff must complete and mark their taks as 'completed'. Management are then notified and can also create reports for performance based purposes.</p>
+                        <ul class="list-inline item-details">
+                            <li>Client:
+                                <strong><a href="http://google.com">Entaz Incorporation</a>
+                                </strong>
+                            </li>
+                            <li>Date:
+                                <strong><a href="http://google.com">May 2015</a>
+                                </strong>
+                            </li>
+                            <li>Service:
+                                <strong><a href="http://google.com">Web App Development</a>
+                                </strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Mobile Social Life</h2>
+                        <hr class="star-primary">
+                        <img src="../../static/app/images/cake.png" class="img-responsive img-centered" alt="">
+                        <p>This company approached me to develop an internal mobile app that is similar to Facebook but exclusively for the company. All employees of the company have their own way to share media within one another. There is also a chat portal available to all employees, either public or private (depending on user access)</p>
+                        <ul class="list-inline item-details">
+                            <li>Client:
+                                <strong><a href="http://google.com">Jack Sparrow Est.</a>
+                                </strong>
+                            </li>
+                            <li>Date:
+                                <strong><a href="http://google.com">Spetember 2013</a>
+                                </strong>
+                            </li>
+                            <li>Service:
+                                <strong><a href="http://google.com">Mobile App Development</a>
+                                </strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Islamic Book Store</h2>
+                        <hr class="star-primary">
+                        <img src="../../static/app/images/circus.png" class="img-responsive img-centered" alt="">
+                        <p>This is an E-Commerce store for a local store in Stanger that sells Islamic books. This uses responsive layouts and the latest Wordpress and Woocommerce technologies. The payement portals are set to work exclusively for South Africans.</p>
+                        <ul class="list-inline item-details">
+                            <li>Client:
+                                <strong><a href="http://google.com">Islamic Book Store Stanger</a>
+                                </strong>
+                            </li>
+                            <li>Date:
+                                <strong><a href="http://google.com">January 2016</a>
+                                </strong>
+                            </li>
+                            <li>Service:
+                                <strong><a href="http://google.com">E-Commerce Store Development</a>
+                                </strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Mix & Match</h2>
+                        <hr class="star-primary">
+                        <img src="../../static/app/images/game.png" class="img-responsive img-centered" alt="">
+                        <p>This client approached me as an individual to develop a game similar to that of Candy Crush. The game logic follow it in a very similar way with adjustments such as graphics and matching directions. It is a more child friendly version that has much easier levels but also has difficult levels to keep those older entertained.</p>
+                        <ul class="list-inline item-details">
+                            <li>Client:
+                                <strong><a href="http://google.com">John Doe</a>
+                                </strong>
+                            </li>
+                            <li>Date:
+                                <strong><a href="http://google.com">December 2012</a>
+                                </strong>
+                            </li>
+                            <li>Service:
+                                <strong><a href="http://google.com">Mobile App Development</a>
+                                </strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Time Capture</h2>
+                        <hr class="star-primary">
+                        <img src="../../static/app/images/safe.png" class="img-responsive img-centered" alt="">
+                        <p>This application is a simple timesheet capture for companies to use in order to manage their hours devoted to certain projects. Administrators can create projects and attach individuals to it in order for them to map the amount of time they have spent on these projects. There are also sub-tasks that can be added to break these projects up as well as an open text field for the person working on a project to make note of what was done. This application is basically a timesheet for management to keep track of billables in a company.</p>
+                        <ul class="list-inline item-details">
+                            <li>Client:
+                                <strong><a href="http://google.com">Internaut</a>
+                                </strong>
+                            </li>
+                            <li>Date:
+                                <strong><a href="http://google.com">August 2012</a>
+                                </strong>
+                            </li>
+                            <li>Service:
+                                <strong><a href="http://google.com">Web App Development</a>
+                                </strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Encom Category Management</h2>
+                        <hr class="star-primary">
+                        <img src="../../static/app/images/submarine.png" class="img-responsive img-centered" alt="">
+                        <p>This site is very similar to that of an E-Commerce store however due to the clients request, it is currently a browsing site of categories of product that this company offers to the public which are available for order. This site is intended, by the client, to be transformed into a fully fledged E-Commerce store in the near future.</p>
+                        <ul class="list-inline item-details">
+                            <li>Client:
+                                <strong><a href="http://google.com">Encom</a>
+                                </strong>
+                            </li>
+                            <li>Date:
+                                <strong><a href="http://google.com">Juna 2016</a>
+                                </strong>
+                            </li>
+                            <li>Service:
+                                <strong><a href="http://google.com">E-Commerce Development</a>
+                                </strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

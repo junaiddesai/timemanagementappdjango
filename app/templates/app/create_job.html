@@ -1,0 +1,50 @@
+﻿{% extends 'app/layout.html' %}
+
+{% block content %}
+<div class="container-fluid" style="padding-top:5%">
+
+    <div class="row">
+
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                        <a href="/app/project_detail/{{ project.id }}">
+                            <img src="../../static/app/images/cake.png" class="img-responsive">
+                        </a>
+                    <h1>{{ project.name }} <small>{{ project.totalTimeLogged }}</small></h1>
+                    <h2>{{ project.description }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-8 col-md-9">
+
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation"><a href="/app/project_detail/{{ project.id }}">View All</a></li>
+                <li role="presentation" class="active"><a href="/app/create_job/{{ project.id }}">Add New Job</a></li>
+            </ul>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Add a New Job</h3>
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="hidden" name="album" value="{{ album }}">
+                        {% include 'app/form_template.html' %}
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

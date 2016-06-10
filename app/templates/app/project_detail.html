@@ -1,0 +1,77 @@
+﻿{% extends 'app/layout.html' %}
+
+{% block content %}
+<div class="container-fluid" style="padding-top:5%;">
+
+    <div class="row">
+
+        <!-- Left Album Info -->
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <a href="/app/project_detail/{{ project.id }}">
+                        <img src="../../static/app/images/circus.png" class="img-responsive">
+                    </a>
+                    <h1>{{ project.name }} <small>{{ project.totalTimeLogged }}</small></h1>
+                    <h2>{{ project.description }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Song Info -->
+        <div class="col-sm-8 col-md-9">
+
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation" class="active"><a href="/app/project_detail/{{ project.id }}">View All</a></li>
+                <li role="presentation"><a class="btn btn-success" href="/app/create_job/{{ project.id }}">Add new job</a></li>
+            </ul>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <h3>All Jobs</h3>
+
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Project</th>
+                            <th>Duration</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for job in jobs %}
+                            <tr>
+                                <td>{{ job.name }}</td>
+                                <td>{{ job.project }}</td>
+                                <td>{{ job.time}}</td>
+                                <td>
+                                    <form action="/app/delete_job/{{ job.id }}/{{ project.id }}" method="get" style="display: inline;">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="job_id" value="{{ job.id }}" />
+                                        <input type="hidden" name="project_id" value="{{ project.id }}" />
+                                        <button type="submit" class="btn btn-danger btn-xs">
+                                            <span class="glyphicon glyphicon-remove"></span>&nbsp; Delete
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
